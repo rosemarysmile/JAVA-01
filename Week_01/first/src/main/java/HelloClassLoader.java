@@ -17,7 +17,7 @@ public class HelloClassLoader extends ClassLoader {
             Method method = helloClass.getDeclaredMethod("hello");
             method.invoke(helloClass.newInstance());
 
-        } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
